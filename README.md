@@ -1,4 +1,5 @@
 # etcjs
+[![Build Status](https://travis-ci.org/mboughaba/etcjs.svg?branch=master)](https://travis-ci.org/mboughaba/etcjs)[![Coverage Status](https://coveralls.io/repos/mboughaba/etcjs/badge.svg)](https://coveralls.io/r/mboughaba/etcjs)[![Dependency Status](https://david-dm.org/mboughaba/etcjs.svg)](https://david-dm.org/mboughaba/etcjs)
 
 Simple stupid node.js configuration module
 
