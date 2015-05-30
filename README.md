@@ -10,17 +10,12 @@ $ NODE_ENV=%ENV% npm start
 # where %ENV% is the target environment.
 ```
 
-### Example
+## Example
 Even this is useless on itw own, here is how to set up configuration for 'development' environment:
 
 ```shell
 $ NODE_ENV=development npm start '../etc/'
 ```
-
-#### Looking for more?
-Check out argument parser [minimist](https://github.com/substack/minimist)
-
-or even [nconf](https://github.com/indexzero/nconf)
 
 ### Using etcjs as a module in your node app
 ```javascript
@@ -30,7 +25,7 @@ config({dir: 'root/dir/of/config/files'}, function () {
 });
 ```
 
-### Running node tests
+## Running node tests
 
 Install dependencies:
 ```shell
@@ -38,8 +33,13 @@ $ npm install
 $ npm test
 ```
 
-### Author:
-Mohamed Boughaba
+## People
+Author: Mohamed Boughaba
 
-### License:
-GPL version 2
+### Looking for more?
+Check out argument parser [minimist](https://github.com/substack/minimist)
+
+or even [nconf](https://github.com/indexzero/nconf)
+
+## License
+[MIT](LICENSE)
