@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+var config = require(__dirname + '/../lib/config');
+config(function() {
+    console.info('configuration has been initialized');
+});

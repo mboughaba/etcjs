@@ -1,0 +1,10 @@
+--require test/env
+--recursive
+--watch
+--colors
+--growl
+--reporter spec
+--bail
+--check-leaks
+--ui bdd
+--throw-deprecation

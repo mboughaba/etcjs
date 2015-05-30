@@ -1,0 +1,37 @@
+{
+    "name": "etcjs",
+    "version": "0.0.5",
+    "private": true,
+    "description": "simple stupid node.js configuration module",
+    "main": "lib/config",
+    "scripts": {
+        "start": "node bin/init",
+        "test": "mocha",
+        "run-test": "mocha --opts ./test/mocha-validate.opts",
+        "cover": "istanbul cover node_modules/mocha/bin/_mocha",
+        "lint": "jshint ."
+    },
+    "engines": {
+        "node": ">=0.12.3"
+    },
+    "author": "Mohamed Boughaba <mohamed.bgb@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "debug": "^2.2.0"
+    },
+    "devDependencies": {
+        "growl": "^1.8.1",
+        "istanbul": "^0.3.14",
+        "mocha": "^2.2.5",
+        "precommit-hook": "latest",
+        "should": "^6.0.3"
+    },
+    "keywords": [
+        "etc",
+        "js",
+        "configuration",
+        "node",
+        "simple"
+    ],
+    "pre-commit": ["lint", "run-test"]
+}
