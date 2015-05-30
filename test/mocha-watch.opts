@@ -1,5 +1,6 @@
 --require test/env
 --recursive
+--watch
 --colors
 --growl
 --reporter spec
