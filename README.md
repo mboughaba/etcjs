@@ -1,5 +1,4 @@
 # etcjs
-[![Build Status](TDOD)](TODO)
 
 Simple stupid node.js configuration module
 
