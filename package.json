@@ -1,54 +1,52 @@
 {
-  "name": "etcjs",
-  "version": "0.7.0",
-  "private": false,
-  "description": "Simple stupid node.js configuration module",
-  "main": "lib/config",
-  "scripts": {
-    "start": "node bin/init",
-    "test": "mocha",
-    "test-watch": "mocha --opts ./test/mocha-watch.opts",
-    "cover": "istanbul cover node_modules/mocha/bin/_mocha",
-    "test-travis": "istanbul cover node_modules/.bin/_mocha --report lcovonly",
-    "lint": "jshint ."
-  },
-  "engines": {
-    "node": ">=0.12.3"
-  },
-  "author": "Mohamed Boughaba <mohamed.bgb@gmail.com>",
-  "contributors": [
-    {
-      "name": "Mohamed Boughaba",
-      "email": "mohamed.bgb@gmail.com"
+    "name": "etcjs",
+    "version": "0.7.0",
+    "private": false,
+    "description": "Simple stupid node.js configuration module",
+    "main": "lib/config",
+    "scripts": {
+        "start": "node bin/init",
+        "test": "mocha",
+        "test-watch": "mocha --opts ./test/mocha-watch.opts",
+        "cover": "istanbul cover node_modules/mocha/bin/_mocha",
+        "test-travis": "istanbul cover node_modules/.bin/_mocha --report lcovonly",
+        "lint": "jshint ."
+    },
+    "engines": {
+        "node": ">=0.8.x"
+    },
+    "author": "Mohamed Boughaba <mohamed.bgb@gmail.com>",
+    "contributors": [{
+        "name": "Mohamed Boughaba",
+        "email": "mohamed.bgb@gmail.com"
+    }],
+    "license": "MIT",
+    "dependencies": {
+        "debug": "^2.2.0"
+    },
+    "devDependencies": {
+        "growl": "^1.8.1",
+        "istanbul": "^0.3.14",
+        "mocha": "^2.2.5",
+        "precommit-hook": "latest",
+        "should": "^6.0.3"
+    },
+    "keywords": [
+        "etc",
+        "js",
+        "configuration",
+        "node",
+        "simple"
+    ],
+    "pre-commit": [
+        "lint",
+        "test"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mboughaba/etcjs.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mboughaba/etcjs/issues"
     }
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "debug": "^2.2.0"
-  },
-  "devDependencies": {
-    "growl": "^1.8.1",
-    "istanbul": "^0.3.14",
-    "mocha": "^2.2.5",
-    "precommit-hook": "latest",
-    "should": "^6.0.3"
-  },
-  "keywords": [
-    "etc",
-    "js",
-    "configuration",
-    "node",
-    "simple"
-  ],
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mboughaba/etcjs.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mboughaba/etcjs/issues"
-  }
 }
