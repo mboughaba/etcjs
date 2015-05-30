@@ -3,21 +3,45 @@
 var config,
     should = require('should'),
     env = process.env.NODE_ENV;
-describe('testing', function() {
+describe('node environment', function() {
     'use strict';
     it('should be running on \'' + env + '\' environment', function() {
         env.should.equal('testing');
     });
 });
-describe('config', function() {
+describe('configuration', function() {
     'use strict';
     it('should not throw', function(done) {
         (function() {
-            config = require(__dirname +
-                '/../../lib/config');
-            config(done);
+            config = require(__dirname + '/../../lib/config');
+            config({
+                dir: '../etc'
+            }, done);
         })
         .should.not.throw();
+    });
+    it('should not throw, even with trailing slash', function(done) {
+        (function() {
+            config = require(__dirname + '/../../lib/config');
+            config({
+                dir: '../etc/'
+            }, done);
+        })
+        .should.not.throw();
+    });
+    it('should throw when required option is missing', function() {
+        (function() {
+            config = require(__dirname + '/../../lib/config');
+            config({});
+        })
+        .should.throw();
+    });
+    it('should throw when options is missing', function() {
+        (function() {
+            config = require(__dirname + '/../../lib/config');
+            config();
+        })
+        .should.throw();
     });
     it('should throw when environment is invalid', function() {
         (function() {

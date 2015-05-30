@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 var config = require(__dirname + '/../lib/config');
-config(function() {
+console.dir(process.argv);
+console.log(process.argv[2]);
+config({dir: process.argv[2]}, function() {
     console.info('configuration has been initialized');
 });
