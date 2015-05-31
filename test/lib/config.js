@@ -31,6 +31,17 @@ describe('configuration', function() {
         })
         .should.not.throw();
     });
+    it('should not throw, when callback is not provided', function(done) {
+        (function() {
+            config = require(__dirname + '/../../lib/config');
+            config({
+                dir: '../etc/',
+                defaultFile: '../etc/default/default.js'
+            });
+        })
+        .should.not.throw();
+        done();
+    });
     it('should overwrite node environment', function(done) {
         (function() {
             config = require(__dirname + '/../../lib/config');
