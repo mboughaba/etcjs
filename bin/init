@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 
-var config = require(__dirname + '/../lib/config');
-console.dir(process.argv);
-console.log(process.argv[2]);
-console.log(process.argv[3]);
-config({
+var etcjs = require(__dirname + '/../lib/etcjs');
+
+etcjs.load({
     dir: process.argv[2],
     defaultFile: process.argv[3]
 }, function() {

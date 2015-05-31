@@ -27,17 +27,15 @@ For example, if NODE_ENV=development then it will require 'root/dir/of/config/fi
 Finally, the callback function is called once all done.
 
 ```javascript
-var config = require(__dirname + '/../lib/config');
-config({dir: 'root/dir/of/config/files/', defaultFile: 'path/to/default/config/file'}, function () {
+var etcjs = require('etcjs');
+etcjs.load({dir: 'root/dir/of/config/files/', defaultFile: 'path/to/default/config/file'}, function () {
     console.info('configuration has been initialized');
 });
 ```
 
 ## Running tests
 
-Install dependencies & run tests:
 ```shell
-$ npm install
 $ npm test
 ```
 
