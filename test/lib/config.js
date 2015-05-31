@@ -15,7 +15,8 @@ describe('configuration', function() {
         (function() {
             config = require(__dirname + '/../../lib/config');
             config({
-                dir: '../etc'
+                dir: '../etc',
+                defaultFile: '../etc/default/default.js'
             }, done);
         })
         .should.not.throw();
@@ -24,15 +25,34 @@ describe('configuration', function() {
         (function() {
             config = require(__dirname + '/../../lib/config');
             config({
-                dir: '../etc/'
+                dir: '../etc/',
+                defaultFile: '../etc/default/default.js'
             }, done);
         })
         .should.not.throw();
     });
-    it('should throw when required option is missing', function() {
+    it('should throw when required options are missing', function() {
         (function() {
             config = require(__dirname + '/../../lib/config');
             config({});
+        })
+        .should.throw();
+    });
+    it('should throw when required option dir is missing', function() {
+        (function() {
+            config = require(__dirname + '/../../lib/config');
+            config({
+                defaultFile: '../etc/default/default.js'
+            });
+        })
+        .should.throw();
+    });
+    it('should throw when required option defaultFile is missing', function() {
+        (function() {
+            config = require(__dirname + '/../../lib/config');
+            config({
+                dir: '../etc/'
+            });
         })
         .should.throw();
     });

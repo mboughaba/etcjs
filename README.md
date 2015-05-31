@@ -6,28 +6,36 @@ Simple stupid node.js configuration module
 ## Installation via [npm](https://npmjs.org)
 
 ```shell
-$ NODE_ENV=%ENV% npm start
-# where %ENV% is the target environment.
+$ npm install etcjs --save
 ```
 
 ## Example
 Even this is useless on itw own, here is how to set up configuration for 'development' environment:
 
 ```shell
-$ NODE_ENV=development npm start '../etc/'
+$ NODE_ENV=%ENV% npm start ../etc ../etc/default/default
+# where %ENV% is the target environment.
 ```
 
 ### Using etcjs as a module in your node app
+tecjs requires few options. Once started up, the module will look for the default configuration file by requiring the 'defaultFile'.
+
+After loading the default configuration, it will load the environment specific file from the 'dir' directory.
+
+For example, if NODE_ENV=development then it will require 'root/dir/of/config/files/development.js'.
+
+Finally, the callback function is called once all done.
+
 ```javascript
 var config = require(__dirname + '/../lib/config');
-config({dir: 'root/dir/of/config/files'}, function () {
+config({dir: 'root/dir/of/config/files/', defaultFile: 'path/to/default/config/file'}, function () {
     console.info('configuration has been initialized');
 });
 ```
 
-## Running node tests
+## Running tests
 
-Install dependencies:
+Install dependencies & run tests:
 ```shell
 $ npm install
 $ npm test

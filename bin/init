@@ -3,6 +3,10 @@
 var config = require(__dirname + '/../lib/config');
 console.dir(process.argv);
 console.log(process.argv[2]);
-config({dir: process.argv[2]}, function() {
+console.log(process.argv[3]);
+config({
+    dir: process.argv[2],
+    defaultFile: process.argv[3]
+}, function() {
     console.info('configuration has been initialized');
 });
