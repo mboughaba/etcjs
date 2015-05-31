@@ -10,7 +10,7 @@ $ npm install etcjs --save
 ```
 
 ## Example
-Even this is useless on itw own, here is how to set up configuration for 'development' environment:
+Even this is useless on its own, here is how to set up configuration for 'development' environment:
 
 ```shell
 $ NODE_ENV=%ENV% npm start ../etc ../etc/default/default
