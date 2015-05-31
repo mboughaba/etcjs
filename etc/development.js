@@ -2,3 +2,4 @@
 var env = process.env;
 
 env.BAZ = 'qux';
+env.DEBUG = '*';

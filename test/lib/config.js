@@ -31,6 +31,48 @@ describe('configuration', function() {
         })
         .should.not.throw();
     });
+    it('should overwrite node environment', function(done) {
+        (function() {
+            config = require(__dirname + '/../../lib/config');
+            config({
+                dir: '../etc/',
+                defaultFile: '../etc/default/default.js'
+            }, function() {
+                var env = process.env;
+                env.TO_BE_OVERWRITTEN.should.equal('overwritten value');
+                done();
+            });
+        })
+        .should.not.throw();
+    });
+    it('should load node environment from default', function(done) {
+        (function() {
+            config = require(__dirname + '/../../lib/config');
+            config({
+                dir: '../etc/',
+                defaultFile: '../etc/default/default.js'
+            }, function() {
+                var env = process.env;
+                env.FOO_BAR.should.equal('baz qux');
+                done();
+            });
+        })
+        .should.not.throw();
+    });
+    it('should load node environment from environment specific file', function(done) {
+        (function() {
+            config = require(__dirname + '/../../lib/config');
+            config({
+                dir: '../etc/',
+                defaultFile: '../etc/default/default.js'
+            }, function() {
+                var env = process.env;
+                env.FOO.should.equal('bar');
+                done();
+            });
+        })
+        .should.not.throw();
+    });
     it('should throw when required options are missing', function() {
         (function() {
             config = require(__dirname + '/../../lib/config');
