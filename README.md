@@ -18,7 +18,7 @@ $ NODE_ENV=%ENV% npm start ../etc ../etc/default/default
 ```
 
 ### Using etcjs as a module in your node app
-tecjs requires few options. Once started up, the module will look for the default configuration file by requiring the 'defaultFile'.
+etcjs requires few options. Once started up, the module will look for the default configuration file by requiring the 'defaultFile'.
 
 After loading the default configuration, it will load the environment specific file from the 'dir' directory.
 
