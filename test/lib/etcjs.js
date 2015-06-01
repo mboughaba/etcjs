@@ -11,6 +11,22 @@ describe('node environment', function() {
 });
 describe('etcjs', function() {
     'use strict';
+    it('should be an instance of Object', function() {
+        etcjs = require(__dirname + '/../../lib/etcjs');
+        etcjs.should.be.an.instanceof(Object);
+    });
+    it('should have a \'load\' function', function() {
+        etcjs = require(__dirname + '/../../lib/etcjs');
+        etcjs.load.should.be.an.instanceof(Function);
+    });
+    it('should have a \'get\' function', function() {
+        etcjs = require(__dirname + '/../../lib/etcjs');
+        etcjs.get.should.be.an.instanceof(Function);
+    });
+    it('should have a \'set\' function', function() {
+        etcjs = require(__dirname + '/../../lib/etcjs');
+        etcjs.set.should.be.an.instanceof(Function);
+    });
     it('should not throw', function(done) {
         (function() {
             etcjs = require(__dirname + '/../../lib/etcjs');
@@ -51,6 +67,35 @@ describe('etcjs', function() {
             }, function() {
                 var env = process.env;
                 env.TO_BE_OVERWRITTEN.should.equal('overwritten value');
+                done();
+            });
+        })
+        .should.not.throw();
+    });
+    it('should be able to get environment variable by key', function(done) {
+        (function() {
+            etcjs = require(__dirname + '/../../lib/etcjs');
+            etcjs.load({
+                dir: '../etc/',
+                defaultFile: '../etc/default.js'
+            }, function() {
+                etcjs.get('FOO').should.equal('bar');
+                done();
+            });
+        })
+        .should.not.throw();
+    });
+    it('should be able to set environment variable value by key', function(done) {
+        (function() {
+            etcjs = require(__dirname + '/../../lib/etcjs');
+            etcjs.load({
+                dir: '../etc/',
+                defaultFile: '../etc/default.js'
+            }, function() {
+                etcjs.set('HELLO', 'WORLD');
+                etcjs.get('HELLO').should.equal('WORLD');
+                etcjs.set('HELLO', 'world!');
+                etcjs.get('HELLO').should.equal('world!');
                 done();
             });
         })
