@@ -18,7 +18,7 @@ $ NODE_ENV=%ENV% npm start ../etc ../etc/default/default
 ```
 
 ### Using etcjs as a module in your node app
-etcjs requires few options. Once started up, the module will look for the default configuration file by requiring the 'defaultFile'.
+Once started up, the module will look for the default configuration file by requiring the 'defaultFile'.
 
 After loading the default configuration, it will load the environment specific file from the 'dir' directory.
 
@@ -32,6 +32,30 @@ etcjs.load({dir: 'root/dir/of/config/files/', defaultFile: 'path/to/default/conf
     console.info('configuration has been initialized');
 });
 ```
+
+if no configuration object is provided, etcjs will look for the default files
+    inside the default location:
+    * default global configuration file: ./etc/all.js
+    * environment specific configuration file: ./etc/%env%.js, where env is the
+    target environment.
+    The callback can also be omitted in this case the module will do it job and
+    returns.
+
+```javascript
+var etcjs = require('etcjs');
+etcjs.load(function () {
+    console.info('configuration has been initialized');
+});
+```
+### methods
+#### load
+load the default and the local configuration and store it in the node
+environment.
+#### get([key])
+returns the environment variable by key.
+returns the node environment if no key is provided
+#### set(key, value)
+sets the environment variable of given key to value.
 
 ## Running tests
 
