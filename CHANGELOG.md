@@ -1,6 +1,14 @@
 ## Change Log
 
-### upcoming (2015/06/03 17:25 +00:00)
+### 1.0.0 (2015/06/03 18:04 +00:00)
+- [d47ef13](https://github.com/mboughaba/etcjs/commit/d47ef13d7d90fdc50d0ea7fca5a41a50cc957db9) etcjs v1.0 (@mboughaba)
+- [399b597](https://github.com/mboughaba/etcjs/commit/399b5976db2828e4ef0afad0657bcc69662c5edd) add CHANGELOG (@mboughaba)
+- [103a5aa](https://github.com/mboughaba/etcjs/commit/103a5aa0d065fc9443124860900104959b6aca45) delete unused configuraion file. (@mboughaba)
+- [00f409d](https://github.com/mboughaba/etcjs/commit/00f409d37997839355e99f0a3e5cc508c8e11bee) Improve default handling (@mboughaba)
+- [3accae4](https://github.com/mboughaba/etcjs/commit/3accae45e3ff9ac56483c2e38d98a5f118cdbd67) Support new methods load, get and set. (@mboughaba)
+- [8264d88](https://github.com/mboughaba/etcjs/commit/8264d880c992d2d9f13973877a961977938258e3) generate changelog based on commit messages. (@mboughaba)
+- [bcb74f6](https://github.com/mboughaba/etcjs/commit/bcb74f6241f1f9f67111f4e2b9536493d948042f) fix typo (@mboughaba)
+- [8d5f550](https://github.com/mboughaba/etcjs/commit/8d5f550da8096f5a63feb7b913a49093e7386ccf) make use of module pattern (@mboughaba)
 - [5929b1f](https://github.com/mboughaba/etcjs/commit/5929b1f688bc4eacd1fe22e2ee0f8535edf9aa66) update 0.11.0 - add check arround callback (@mboughaba)
 - [1f8fbda](https://github.com/mboughaba/etcjs/commit/1f8fbda25a21b0ba7f07bb45248b39f13a93f409) check if callback exists before calling it (@mboughaba)
 - [09ab49a](https://github.com/mboughaba/etcjs/commit/09ab49a8fb8194ba4b770f73297bd9b2dcac1a67) fix typo (@mboughaba)
