@@ -1,6 +1,6 @@
 ## Change Log
 
-### upcoming (2015/06/01 19:46 +00:00)
+### upcoming (2015/06/03 17:25 +00:00)
 - [5929b1f](https://github.com/mboughaba/etcjs/commit/5929b1f688bc4eacd1fe22e2ee0f8535edf9aa66) update 0.11.0 - add check arround callback (@mboughaba)
 - [1f8fbda](https://github.com/mboughaba/etcjs/commit/1f8fbda25a21b0ba7f07bb45248b39f13a93f409) check if callback exists before calling it (@mboughaba)
 - [09ab49a](https://github.com/mboughaba/etcjs/commit/09ab49a8fb8194ba4b770f73297bd9b2dcac1a67) fix typo (@mboughaba)
