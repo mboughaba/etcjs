@@ -1,5 +1,8 @@
 ## Change Log
 
+### upcoming (2015/06/04 17:42 +00:00)
+- [0179772](https://github.com/mboughaba/etcjs/commit/017977248c9e917806c003cfb33d476862069d1f) Add changelog. (@mboughaba)
+
 ### 1.0.0 (2015/06/03 18:04 +00:00)
 - [d47ef13](https://github.com/mboughaba/etcjs/commit/d47ef13d7d90fdc50d0ea7fca5a41a50cc957db9) etcjs v1.0 (@mboughaba)
 - [399b597](https://github.com/mboughaba/etcjs/commit/399b5976db2828e4ef0afad0657bcc69662c5edd) add CHANGELOG (@mboughaba)
