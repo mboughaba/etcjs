@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Etcjs by mboughaba</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Etcjs</h1>
+        <p>Simple node.js configuration module</p>
+
+        <p class="view"><a href="https://github.com/mboughaba/etcjs">View the Project on GitHub <small>mboughaba/etcjs</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/mboughaba/etcjs/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mboughaba/etcjs/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mboughaba/etcjs">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="etcjs" class="anchor" href="#etcjs" aria-hidden="true"><span class="octicon octicon-link"></span></a>etcjs</h1>
+
+<p><a href="https://travis-ci.org/mboughaba/etcjs"><img src="https://travis-ci.org/mboughaba/etcjs.svg?branch=master" alt="Build Status"></a><a href="https://coveralls.io/r/mboughaba/etcjs"><img src="https://coveralls.io/repos/mboughaba/etcjs/badge.svg" alt="Coverage Status"></a><a href="https://david-dm.org/mboughaba/etcjs"><img src="https://david-dm.org/mboughaba/etcjs.svg" alt="Dependency Status"></a></p>
+
+<p>Simple node.js configuration module</p>
+
+<h2>
+<a id="installation-via-npm" class="anchor" href="#installation-via-npm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation via <a href="https://npmjs.org">npm</a>
+</h2>
+
+<div class="highlight highlight-shell"><pre>$ npm install etcjs --save</pre></div>
+
+<h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p>Even this is useless on its own, here is how to set up configuration for 'development' environment:</p>
+
+<div class="highlight highlight-shell"><pre>$ NODE_ENV=%ENV% npm start ../etc ../etc/default/default
+<span class="pl-c"># where %ENV% is the target environment.</span></pre></div>
+
+<h3>
+<a id="using-etcjs-as-a-module-in-your-node-app" class="anchor" href="#using-etcjs-as-a-module-in-your-node-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using etcjs as a module in your node app</h3>
+
+<p>Once started up, the module will look for the default configuration file by requiring the 'defaultFile'.</p>
+
+<p>After loading the default configuration, it will load the environment specific file from the 'dir' directory.</p>
+
+<p>For example, if NODE_ENV=development then it will require 'root/dir/of/config/files/development.js'.</p>
+
+<p>Finally, the callback function is called once all done.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> etcjs <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>etcjs<span class="pl-pds">'</span></span>);
+etcjs.<span class="pl-c1">load</span>({dir<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>root/dir/of/config/files/<span class="pl-pds">'</span></span>, defaultFile<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>path/to/default/config/file<span class="pl-pds">'</span></span>}, <span class="pl-k">function</span> () {
+    <span class="pl-en">console</span><span class="pl-c1">.info</span>(<span class="pl-s"><span class="pl-pds">'</span>configuration has been initialized<span class="pl-pds">'</span></span>);
+});</pre></div>
+
+<p>if no configuration object is provided, etcjs will look for the default files
+    inside the default location:
+    * default global configuration file: ./etc/all.js
+    * environment specific configuration file: ./etc/%env%.js, where env is the
+    target environment.
+    The callback can also be omitted in this case the module will do it job and
+    returns.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> etcjs <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>etcjs<span class="pl-pds">'</span></span>);
+etcjs.<span class="pl-c1">load</span>(<span class="pl-k">function</span> () {
+    <span class="pl-en">console</span><span class="pl-c1">.info</span>(<span class="pl-s"><span class="pl-pds">'</span>configuration has been initialized<span class="pl-pds">'</span></span>);
+});</pre></div>
+
+<h3>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>methods</h3>
+
+<h4>
+<a id="load" class="anchor" href="#load" aria-hidden="true"><span class="octicon octicon-link"></span></a>load</h4>
+
+<p>load the default and the local configuration and store it in the node
+environment.</p>
+
+<h4>
+<a id="getkey" class="anchor" href="#getkey" aria-hidden="true"><span class="octicon octicon-link"></span></a>get([key])</h4>
+
+<p>returns the environment variable by key.
+returns the node environment if no key is provided</p>
+
+<h4>
+<a id="setkey-value" class="anchor" href="#setkey-value" aria-hidden="true"><span class="octicon octicon-link"></span></a>set(key, value)</h4>
+
+<p>sets the environment variable of given key to value.</p>
+
+<h2>
+<a id="running-tests" class="anchor" href="#running-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running tests</h2>
+
+<div class="highlight highlight-shell"><pre>$ npm <span class="pl-c1">test</span></pre></div>
+
+<h2>
+<a id="people" class="anchor" href="#people" aria-hidden="true"><span class="octicon octicon-link"></span></a>People</h2>
+
+<p>Author: Mohamed Boughaba</p>
+
+<h3>
+<a id="looking-for-more" class="anchor" href="#looking-for-more" aria-hidden="true"><span class="octicon octicon-link"></span></a>Looking for more?</h3>
+
+<p>Check out argument parser <a href="https://github.com/substack/minimist">minimist</a></p>
+
+<p>or even <a href="https://github.com/indexzero/nconf">nconf</a></p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="LICENSE">MIT</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/mboughaba">mboughaba</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
