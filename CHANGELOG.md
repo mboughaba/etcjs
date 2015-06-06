@@ -1,6 +1,10 @@
 ## Change Log
 
-### upcoming (2015/06/04 17:42 +00:00)
+### upcoming (2015/06/06 08:36 +00:00)
+- [7d9c006](https://github.com/mboughaba/etcjs/commit/7d9c006d74482b4ea9721ae5b7ea0363120e4b4e) Remove stupid from heading and README (@mboughaba)
+- [5887342](https://github.com/mboughaba/etcjs/commit/5887342099cf0e7a818bd4711c5f638f5ecc2fb3) Drop support of node 0.8 (@mboughaba)
+- [d2a4320](https://github.com/mboughaba/etcjs/commit/d2a4320b3521d8597b6a9f0f7ef0b9c9bd830269) Add changelog. (@mboughaba)
+- [80f3361](https://github.com/mboughaba/etcjs/commit/80f3361bc3b9ba75c22ef9a1e718d5f3be241dd0) Drop support of node 0.8 (@mboughaba)
 - [0179772](https://github.com/mboughaba/etcjs/commit/017977248c9e917806c003cfb33d476862069d1f) Add changelog. (@mboughaba)
 
 ### 1.0.0 (2015/06/03 18:04 +00:00)
