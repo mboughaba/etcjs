@@ -148,6 +148,7 @@ describe('etcjs behavior', function() {
                 defaultFile: '../etc/all.js'
             }, function() {
                 var env = process.env;
+
                 env.TO_BE_OVERWRITTEN.should.equal(
                     'overwritten value');
                 done();
@@ -164,6 +165,7 @@ describe('etcjs behavior', function() {
                 defaultFile: '../etc/all.js'
             }, function() {
                 var env = process.env;
+
                 env.FOO_BAR.should.equal('baz qux');
                 done();
             });
@@ -180,6 +182,7 @@ describe('etcjs behavior', function() {
                     defaultFile: '../etc/all.js'
                 }, function() {
                     var env = process.env;
+
                     env.FOO.should.equal('bar');
                     done();
                 });
@@ -219,8 +222,7 @@ describe('etcjs behavior', function() {
     it('should throw when environment is missing', function() {
         (function() {
             process.env.NODE_ENV = '';
-            etcjs = require(__dirname +
-                '/../../lib/etcjs');
+            etcjs = require(__dirname + '/../../lib/etcjs');
             etcjs.load();
         })
         .should.throw();
@@ -230,8 +232,7 @@ describe('etcjs behavior', function() {
         (function() {
             process.env.NODE_ENV =
                 './node_module/bin/mocha';
-            etcjs = require(__dirname +
-                '/../../lib/etcjs');
+            etcjs = require(__dirname + '/../../lib/etcjs');
             etcjs.load();
         })
         .should.throw();
