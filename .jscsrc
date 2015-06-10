@@ -130,5 +130,9 @@
     "validateNewlineAfterArrayElements": {
           "maximum": 3
     },
-    "validateParameterSeparator": ", "
+    "validateParameterSeparator": ", ",
+    "excludeFiles": [
+        "node_modules/**",
+        "coverage/**"
+    ]
 }
