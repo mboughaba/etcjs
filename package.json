@@ -11,7 +11,10 @@
         "cover": "istanbul cover node_modules/mocha/bin/_mocha",
         "test-travis": "istanbul cover node_modules/.bin/_mocha --report lcovonly",
         "lint": "jshint .",
-        "check": "jscs ."
+        "check": "jscs .",
+        "inspect": "jsinspect .",
+        "coverage": "istanbul check-coverage --statement 100 --branch 100 --function 100 --line 100",
+        "validate": "npm ls"
     },
     "engines": {
         "node": ">=0.10.x"
@@ -40,9 +43,11 @@
         "simple"
     ],
     "pre-commit": [
-        "check",
         "lint",
-        "test"
+        "check",
+        "inspect",
+        "cover",
+        "coverage"
     ],
     "repository": {
         "type": "git",
