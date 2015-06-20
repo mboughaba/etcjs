@@ -1,6 +1,13 @@
 ## Change Log
 
-### upcoming (2015/06/06 08:36 +00:00)
+### upcoming (2015/06/20 18:19 +00:00)
+- [cb764ad](https://github.com/mboughaba/etcjs/commit/cb764ad18160348f6016d774ac6f6df0fd1788ff) 1.0.3 - add jsinspect and coverage check (@mboughaba)
+- [c356284](https://github.com/mboughaba/etcjs/commit/c3562849ee67d4c39292d577ee76e3e79d4db3e8) Add jsinspect and ignore test file. (@mboughaba)
+- [2a2aba7](https://github.com/mboughaba/etcjs/commit/2a2aba75e14c2a57b609d5fbac0e9deb2c13bd50) Add jscs check to commit hook (@mboughaba)
+- [a353d46](https://github.com/mboughaba/etcjs/commit/a353d46aa7d8534564e0d193bafb0bd8fa25b9af) Add jscs style check (@mboughaba)
+- [1273a10](https://github.com/mboughaba/etcjs/commit/1273a107670ed6a60715686223f2554c4090214d) Add changelog. (@mboughaba)
+- [d0a4dd2](https://github.com/mboughaba/etcjs/commit/d0a4dd26f1e488759710cc8052898ff8fe231192) increase node engine requirement (@mboughaba)
+- [b2117fd](https://github.com/mboughaba/etcjs/commit/b2117fd58864f1fd89420f98e7c7fc81f317ced3) Change node engine requirement. (@mboughaba)
 - [7d9c006](https://github.com/mboughaba/etcjs/commit/7d9c006d74482b4ea9721ae5b7ea0363120e4b4e) Remove stupid from heading and README (@mboughaba)
 - [5887342](https://github.com/mboughaba/etcjs/commit/5887342099cf0e7a818bd4711c5f638f5ecc2fb3) Drop support of node 0.8 (@mboughaba)
 - [d2a4320](https://github.com/mboughaba/etcjs/commit/d2a4320b3521d8597b6a9f0f7ef0b9c9bd830269) Add changelog. (@mboughaba)
