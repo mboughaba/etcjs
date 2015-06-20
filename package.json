@@ -1,6 +1,6 @@
 {
   "name": "etcjs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "description": "Simple stupid node.js configuration module",
   "main": "lib/etcjs",
