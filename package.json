@@ -32,10 +32,10 @@
   },
   "devDependencies": {
     "growl": "^1.8.1",
-    "istanbul": "^0.3.14",
+    "istanbul": "^0.4.1",
     "mocha": "^2.2.5",
     "precommit-hook": "latest",
-    "should": "^6.0.3"
+    "should": "^7.1.1"
   },
   "keywords": [
     "etc",
