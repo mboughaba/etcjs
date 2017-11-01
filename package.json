@@ -19,11 +19,11 @@
   "engines": {
     "node": ">=8.9.x"
   },
-  "author": "Mohamed Boughaba <mohamed.bgb@gmail.com>",
+  "author": "Mohamed Boughaba <undasight@gmail.com>",
   "contributors": [
     {
       "name": "Mohamed Boughaba",
-      "email": "mohamed.bgb@gmail.com"
+      "email": "undasight@gmail.com"
     }
   ],
   "license": "MIT",
